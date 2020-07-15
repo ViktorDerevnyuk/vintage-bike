@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*Обнуление*/
+/*null styles*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   padding: 0;
@@ -176,128 +175,8 @@ body {
 
 .header {
   background: url("../img/header/header_bg.png") center center/cover no-repeat fixed;
-  background-color: #464646;
+  background-color: #d1d1d1;
   min-height: 100%;
-}
-
-.header__nav {
-  margin-top: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header__nav .mobile-bar {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: none;
-  z-index: 100;
-}
-
-.header__nav .mobile-bar span {
-  display: block;
-  height: 5px;
-  width: 40px;
-  margin: 2px;
-  background-color: #4c4857;
-}
-
-.header__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 767px) {
-  .header__nav .mobile-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: auto;
-  }
-  .header__list {
-    -webkit-transition: ease 1s opacity, ease 1s max-height;
-    transition: ease 1s opacity, ease 1s max-height;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    visibility: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: fixed;
-    left: 0;
-    top: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 38px;
-    background: rgba(240, 242, 248, 0.8);
-    z-index: 10;
-    width: 100%;
-  }
-  .header__list.active {
-    opacity: 1;
-    max-height: 500px;
-  }
-  .header__link {
-    min-width: 100%;
-    text-align: center;
-  }
-  .header__link a {
-    font-size: 38px;
-    min-width: 100%;
-    padding: 20px 0px;
-  }
-  .header__dot {
-    display: none;
-  }
-}
-
-.header__link {
-  color: #4d4959;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2.6px;
-  display: inline-block;
-}
-
-.header__link a {
-  display: inline-block;
-  color: black;
-  text-decoration: none;
-  padding: 0.5em 1em;
-}
-
-.header__link a:visited {
-  color: black;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2.6px;
 }
 
 .header__logo {
@@ -305,14 +184,64 @@ body {
   padding-right: 60px;
 }
 
-.header__dot {
-  padding-left: 35px;
-  padding-right: 35px;
-  color: #4d4959;
-  font-size: 13px;
-  font-weight: 700;
+.header__nav-wrapper {
+  padding: 50px 0;
+}
+
+.header__nav {
+  position: relative;
+}
+
+.header__nav ul {
+  float: left;
+  left: 50%;
+  position: relative;
+}
+
+.header__nav ul li {
+  margin: 0 30px;
+  float: left;
+  left: -50%;
+  position: relative;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #353738;
   text-transform: uppercase;
-  letter-spacing: 2.6px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  /* HOVER EFFECT */
+}
+
+.header__link:active {
+  color: rgba(161, 161, 161, 0.644);
+  text-shadow: 0px 0px 1px rgba(161, 161, 161, 0.644);
+}
+
+.header__link:before, .header__link:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  opacity: 0;
+  background-color: #353738;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__link:before {
+  top: -7px;
+}
+
+.header__link:after {
+  bottom: -5px;
+  right: 0;
+}
+
+.header__link:hover:before, .header__link:hover:after {
+  width: calc(100% + 20px);
+  opacity: 0.7;
 }
 
 .generation {
@@ -1017,11 +946,6 @@ body {
   vertical-align: bottom;
   height: 35px;
   line-height: 35px;
-}
-
-.header__link:active a {
-  background-color: #5b5867;
-  color: #f7f7f7;
 }
 
 .arrow {

@@ -1,81 +1,6 @@
-/*Обнуление*/
-* {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-*,
-*:before,
-*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus,
-:active {
-	outline: none;
-}
-a:focus,
-a:active {
-	outline: none;
-}
-nav,
-footer,
-header,
-aside {
-	display: block;
-}
-html,
-body {
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-input,
-button,
-textarea {
-	font-family: inherit;
-}
-input::-ms-clear {
-	display: none;
-}
-button {
-	cursor: pointer;
-}
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-}
-a,
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-ul li {
-	list-style: none;
-}
-img {
-	vertical-align: top;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-size: inherit;
-	font-weight: inherit;
-}
-/*--------------------*/
-
-// шрифт
+// null style file
+@import "nullstyle.scss";
+// Lato font
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 html {
@@ -143,107 +68,62 @@ body {
 
 .header {
 	background: url("../img/header/header_bg.png") center center / cover no-repeat fixed;
-	background-color: #464646;
+	background-color: #d1d1d1;
 	min-height: 100%;
-	&__nav {
-		margin-top: 35px;
-		display: flex;
-		position: relative;
-		justify-content: center;
-		.mobile-bar {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			top: 10px;
-			right: 10px;
-			display: none;
-			z-index: 100;
-			span {
-				display: block;
-				height: 5px;
-				width: 40px;
-				margin: 2px;
-				background-color: #4c4857;
-			}
-		}
-	}
-	&__list {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	@media (max-width: 767px) {
-		&__nav .mobile-bar {
-			display: flex;
-			margin-right: auto;
-		}
-		&__list {
-			transition: ease 1s opacity, ease 1s max-height;
-			opacity: 0;
-			max-height: 0;
-			overflow: hidden;
-			visibility: none;
-			display: flex;
-			position: fixed;
-			left: 0;
-			top: 0;
-			flex-direction: column;
-			font-size: 38px;
-			background: rgba($color: #f0f2f8, $alpha: 0.8);
-			z-index: 10;
-			width: 100%;
-		}
-		&__list.active {
-			opacity: 1;
-			max-height: 500px;
-		}
-		&__link {
-			min-width: 100%;
-			text-align: center;
-			a {
-				font-size: 38px;
-				min-width: 100%;
-				padding: 20px 0px;
-			}
-		}
-		&__dot {
-			display: none;
-		}
-	}
-	&__link {
-		color: #4d4959;
-		font-size: 13px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 2.6px;
-		display: inline-block;
-		a {
-			display: inline-block;
-			color: black;
-			text-decoration: none;
-			padding: 0.5em 1em;
-			&:visited {
-				color: black;
-				font-size: 13px;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 2.6px;
-			}
-		}
-	}
 	&__logo {
 		padding-left: 60px;
 		padding-right: 60px;
 	}
-	&__dot {
-		padding-left: 35px;
-		padding-right: 35px;
-		color: #4d4959;
-		font-size: 13px;
-		font-weight: 700;
+	&__nav-wrapper {
+		padding: 50px 0;
+	}
+	&__nav {
+		position: relative;
+		ul {
+			float: left;
+			left: 50%;
+			position: relative;
+			li {
+				margin: 0 30px;
+				float: left;
+				left: -50%;
+				position: relative;
+			}
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: #353738;
 		text-transform: uppercase;
-		letter-spacing: 2.6px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		&:active {
+			color: rgba(161, 161, 161, 0.644);
+			text-shadow: 0px 0px 1px rgba(161, 161, 161, 0.644);
+		}
+		/* HOVER EFFECT */
+		&:before,
+		&:after {
+			content: "";
+			height: 2px;
+			width: 0;
+			opacity: 0;
+			background-color: #353738;
+			position: absolute;
+			transition: all 0.5s;
+		}
+		&:before {
+			top: -7px;
+		}
+		&:after {
+			bottom: -5px;
+			right: 0;
+		}
+		&:hover:before,
+		&:hover:after {
+			width: calc(100% + 20px);
+			opacity: 0.7;
+		}
 	}
 }
 
@@ -686,11 +566,6 @@ body {
 		height: 35px;
 		line-height: 35px;
 	}
-}
-
-.header__link:active a {
-	background-color: #5b5867;
-	color: #f7f7f7;
 }
 
 //стрелка скролла на начало страницы
