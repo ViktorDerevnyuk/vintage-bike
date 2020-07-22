@@ -344,8 +344,9 @@ body {
 			right: -7.5px;
 		}
 		@media (max-width: 750px) {
-			padding-left: 1 5px;
-			padding-right: 15px;
+			padding-left: 7.5vw;
+			padding-right: 7.5vw;
+			font-size: 14px;
 		}
 	}
 }
@@ -412,8 +413,9 @@ body {
 			left: -7.5px;
 		}
 		@media (max-width: 750px) {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 7.5vw;
+			padding-right: 7.5vw;
+			font-size: 14px;
 		}
 	}
 	&__quote {
