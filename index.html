@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Vintage Bike</title>
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="robots" content="">
@@ -18,16 +18,22 @@
 		<header class="header">
 			<div class="header__nav-wrapper">
 				<nav class="header__nav">
-					<ul>
+					<ul id="top-navigation">
 						<li><a class="header__link" href="#about">about us</a></li>
 						<li><a class="header__link" href="#work">work</a></li>
-						<li class="header__logo"><a href=""><img src="img/header/header_Logo.png" alt=""></a></li>
+						<li class="header__logo"><a href=""><img src="./img/header/header_Logo.png" alt=""></a></li>
 						<li><a class="header__link" href="#shop_now">shop</a></li>
 						<li><a class="header__link" href="#contact">contact</a></li>
 					</ul>
 				</nav>
 			</div>
-
+			<div class="menu-icon" onclick="openNav()">
+				<div class="menu-icon__wrapper">
+					<div class="menu-icon__top" id="menu-icon__top"></div>
+					<div class="menu-icon__middle" id="menu-icon__middle"></div>
+					<div class="menu-icon__bottom" id="menu-icon__bottom"></div>
+				</div>
+			</div>
 		</header>
 		<div class="main-part">
 			<section class="generation" id="about">
@@ -41,8 +47,9 @@
 			<section class="vintage">
 				<div class="vintage__row">
 					<div class="vintage__img-part">
-						<img src="img/content/img_1.png" alt="">
-						<img class="vintage__ico ico" src="img/content/img_1_1.png" alt="">
+						<div>
+							<img class="vintage__ico" src="img/content/img_1_1.png" alt="">
+						</div>
 					</div>
 					<div class="vintage__text-part">
 						<div class="vintage__logo logo"><img src="img/content/Icon_2.png" alt=""></div>
@@ -65,7 +72,7 @@
 						</div>
 						<div class="boriosa__title title">La Boriosa</div>
 						<div class="boriosa__text text">Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+							industry. Lorem Ipsum githas been the industry's standard dummy text ever since the 1500s, when an
 							unknown printer took a galley of type and scrambled it to make a type specimen book. It has
 							survived.</div>
 						<div class="boriosa__quote quote">
@@ -73,16 +80,16 @@
 						</div>
 					</div>
 					<div class="boriosa__img-part">
-						<img src="img/content/img_4.png" alt="">
-						<img class="boriosa__ico ico" src="img/content/img_4_1.png" alt="">
+						<div>
+							<img class="boriosa__ico" src="img/content/img_4_1.png" alt="">
+						</div>
 					</div>
 				</div>
 			</section>
 			<section class="retro">
 				<div class="retro__row">
-					<div class="retro__img-part">
-						<img src="img/content/img_5.png" alt="">
-						<img class="retro__ico ico" src="img/content/img_5_1.png" alt="">
+					<div class="retro__img-part-left">
+						<img class="retro__ico" src="img/content/img_5_1.png" alt="">
 					</div>
 					<div class="retro__text-part">
 						<div class="retro__logo logo">
@@ -97,39 +104,51 @@
 							<img src="img/content/img_6.png" alt="">
 						</div>
 					</div>
-					<div class="retro__img-part">
-						<img src="img/content/img_7.png" alt="">
-					</div>
+					<div class="retro__img-part-right"></div>
 				</div>
 			</section>
+
 			<section class="twitter">
 				<div class="twitter__logo"><img src="img/bottom/Icon-tw.png" alt=""></div>
-				<div class="twitter__top">
-					<span>AOD New York @aod </span>
-					<span>/ 35 min</span>
+				<div class="twitter__slider slider">
+					<div class="slider__container">
+						<div class="slider__content fade">
+							<h2 class="slider__caption">Lorem @lorem</h2>
+							<p class="slider__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, nihil?.</p>
+						</div>
+						<div class="slider__content fade">
+							<h2 class="slider__caption">Lorem2 @lorem2</h2>
+							<p class="slider__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quo illo
+								magni, doloribus nisi eius.</p>
+						</div>
+						<div class="slider__content fade">
+							<h2 class="slider__caption">Lorem3 @lorem3</h2>
+							<p class="slider__text">Cupiditate, in ipsam aliquid perspiciatis possimus eius</p>
+						</div>
+						<!-- The dots/circles -->
+						<div class="slider__navigation">
+							<span class="slider__dot" onclick="currentTwit(1)"></span>
+							<span class="slider__dot" onclick="currentTwit(2)"></span>
+							<span class="slider__dot" onclick="currentTwit(3)"></span>
+						</div>
+					</div>
 				</div>
-				<div class="twitter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla
-					semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</div>
-				<div class="twitter__selector">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+
 			</section>
 			<section class="shop" id="shop_now">
 				<div class="shop__row">
 					<div class="shop__part-1">
 						<div class="shop__part-1-top">
-							<div><img src="img/bottom/shop1-1.png" alt=""></div>
 							<div><img src="img/bottom/shop1-2.png" alt=""></div>
+							<div><img src="img/bottom/shop1-1.png" alt=""></div>
 						</div>
 						<div class="shop__part-1-bottom">
 							<img src="img/bottom/shop1-3.png" alt="">
 						</div>
 					</div>
 					<div class="shop__part-2">
-						<div><img src="img/bottom/shop2-1.png" alt=""></div>
 						<div><img src="img/bottom/shop2-2.png" alt=""></div>
+						<div><img src="img/bottom/shop2-1.png" alt=""></div>
 					</div>
 					<div class="shop__part3">
 						<div class="shop__part-3-top">
@@ -163,12 +182,12 @@
 				<div class="footer__adress">
 					<div>AOD New York</div>
 					<div>2250 Lexington Avenue</div>
-					<div>New York, NY 10035 - info@domain.com</div>
+					<div>New York, NY 10035 - <a href="mailto:info@domain.com">info@domain.com</a></div>
 				</div>
 				<div class="footer__social">
-					<img src="img/bottom/soc1.png" alt="">
-					<img src="img/bottom/soc2.png" alt="">
-					<img src="img/bottom/soc3.png" alt="">
+					<img src="img/bottom/twitter.svg" alt="">
+					<img src="img/bottom/facebook.svg" alt="">
+					<img src="img/bottom/pinterest.svg" alt="">
 				</div>
 				<div class="footer__yebo">
 					<span>Handcrafted by</span>
@@ -177,9 +196,7 @@
 			</div>
 		</footer>
 		<div class="arrow" id="arrowTop" hidden>
-			<span></span>
-			<span></span>
-			<span></span>
+			<img src="img/bottom/up-arrow.svg" alt="">
 		</div>
 	</div>
 	<script src="js/script.js"></script>
