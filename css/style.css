@@ -263,8 +263,12 @@ body {
   }
   .header__nav ul li:nth-child(3) {
     position: absolute;
-    top: 30px;
-    left: 10px;
+    top: 15px;
+    right: -15px;
+  }
+  .header__nav ul li:nth-child(3) a img {
+    width: 48px;
+    height: 48px;
   }
   .header__nav ul.active {
     display: -webkit-box;
@@ -487,7 +491,7 @@ body {
 
 @media (max-width: 750px) {
   .vintage__text-part-img {
-    margin-top: 40px;
+    margin-top: 60px;
     height: 200px;
   }
 }
@@ -641,7 +645,7 @@ body {
 
 @media (max-width: 750px) {
   .boriosa__text-part-img {
-    margin-top: 40px;
+    margin-top: 60px;
     height: 200px;
   }
 }
@@ -795,7 +799,7 @@ body {
 
 @media (max-width: 750px) {
   .retro__text-part-img {
-    margin-top: 40px;
+    margin-top: 60px;
     height: 200px;
   }
 }

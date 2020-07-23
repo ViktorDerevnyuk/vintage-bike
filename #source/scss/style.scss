@@ -133,8 +133,12 @@ body {
 				background-color: rgba(0, 0, 0, 0.9);
 				li:nth-child(3) {
 					position: absolute;
-					top: 30px;
-					left: 10px;
+					top: 15px;
+					right: -15px;
+					a img {
+						width: 48px;
+						height: 48px;
+					}
 				}
 				&.active {
 					display: flex;
@@ -292,7 +296,7 @@ body {
 		width: 100%;
 		flex: 1 1 auto;
 		@media (max-width: 750px) {
-			margin-top: 40px;
+			margin-top: 60px;
 			height: 200px;
 		}
 	}
@@ -374,7 +378,7 @@ body {
 		width: 100%;
 		flex: 1 1 auto;
 		@media (max-width: 750px) {
-			margin-top: 40px;
+			margin-top: 60px;
 			height: 200px;
 		}
 	}
@@ -456,7 +460,7 @@ body {
 		width: 100%;
 		flex: 1 1 auto;
 		@media (max-width: 750px) {
-			margin-top: 40px;
+			margin-top: 60px;
 			height: 200px;
 		}
 	}
