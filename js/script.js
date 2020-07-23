@@ -33,3 +33,12 @@ function openNav() {
   document.getElementById("menu-icon__middle").classList.toggle("active");
   document.getElementById("menu-icon__bottom").classList.toggle("active");
 }
+
+// уменьшение размера навигации при скролле
+window.addEventListener('scroll', function () {
+  if (pageYOffset > 99) {
+    document.getElementById("header__logo").classList.add('scrolled');
+  } else {
+    document.getElementById("header__logo").classList.remove('scrolled');
+  }
+});
