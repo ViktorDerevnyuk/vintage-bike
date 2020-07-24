@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Vintage Bike</title>
 	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css">
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 	<meta name="description" content="">
@@ -35,6 +37,7 @@
 					<div class="menu-icon__bottom" id="menu-icon__bottom"></div>
 				</div>
 			</div>
+			<div class="tagline">feel the classics</div>
 		</header>
 		<div class="main-part">
 			<section class="generation" id="about">
@@ -117,29 +120,23 @@
 			<section class="twitter">
 				<div class="twitter__logo"><img src="img/bottom/Icon-tw.png" alt=""></div>
 				<div class="twitter__slider slider">
-					<div class="slider__container">
-						<div class="slider__content fade">
+					<div class="owl-carousel owl-theme" id="slider">
+						<div class="slider__content">
 							<h2 class="slider__caption">Bike Commuting MA <span>@driversofnyc</span></h2>
 							<p class="slider__text">Did Boston take all of NYC's? They were averaging like 10-20ft between
 								barrels</p>
 						</div>
-						<div class="slider__content fade">
+						<div class="slider__content">
 							<h2 class="slider__caption">Jesse Huffman <span>@thattoasterbox</span></h2>
 							<p class="slider__text">I read these comments and think, yes, a 20 pound bicycle going 5 miles an
 								hour should definitely be allowed in the middle of the road as 3000 pound cars go by at 30 miles
 								an hour, just use the damn bike lane or get over as far as you can without putting yourself at
 								harms way</p>
 						</div>
-						<div class="slider__content fade">
+						<div class="slider__content">
 							<h2 class="slider__caption">CyclingMikey aka Bike Gandalf <span>@MikeyCycling</span></h2>
 							<p class="slider__text">I was quite heavily loaded yesterday. Got some amused bike on bike comments
 								at traffic lights too.</p>
-						</div>
-						<!-- The dots/circles -->
-						<div class="slider__navigation">
-							<span class="slider__dot" onclick="currentTwit(1)"></span>
-							<span class="slider__dot" onclick="currentTwit(2)"></span>
-							<span class="slider__dot" onclick="currentTwit(3)"></span>
 						</div>
 					</div>
 				</div>
@@ -149,29 +146,47 @@
 				<div class="shop__row">
 					<div class="shop__part-1">
 						<div class="shop__part-1-top">
-							<div><img src="img/bottom/shop1-2.png" alt=""></div>
-							<div><img src="img/bottom/shop1-1.png" alt=""></div>
+							<div class="overflow-container">
+								<div class="img-container"></div>
+							</div>
+							<div class="overflow-container">
+								<div class="img-container"></div>
+							</div>
 						</div>
 						<div class="shop__part-1-bottom">
-							<div><img src="img/bottom/shop1-3.png" alt=""></div>
+							<div class="overflow-container">
+								<div class="img-container"></div>
+							</div>
 						</div>
 					</div>
 					<div class="shop__part-2">
-						<div><img src="img/bottom/shop2-2.png" alt=""></div>
-						<div><img src="img/bottom/shop2-1.png" alt=""></div>
+						<div class="overflow-container">
+							<div class="overflow-container"></div>
+							<div class="img-container"></div>
+						</div>
+						<div class="overflow-container">
+							<div class="img-container"></div>
+						</div>
 					</div>
 					<div class="shop__part3">
 						<div class="shop__part-3-top"><a href="#shop_now">
-								<img class="shop__img" src="img/bottom/shop3-1.png" alt="">
-								<div>
+								<div class="overflow-container">
+									<div class="img-container"></div>
+								</div>
+								<div class="shop-now">
 									<img class="shop__ico" src="img/bottom/Shape_13.png" alt="">
 									<div class="shop__title">Shop now</div>
 								</div>
 						</div></a>
 						<div class="shop__part-3-bottom">
-							<div><img src="img/bottom/shop3-2.png" alt=""></div>
-							<div><img src="img/bottom/shop3-3.png" alt=""></div>
+							<div class="overflow-container">
+								<div class="img-container"></div>
+							</div>
+							<div class="overflow-container">
+								<div class="img-container"></div>
+							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="shop__button-container">
@@ -180,7 +195,7 @@
 			</section>
 
 			<section class="email">
-				<a href="#"><img src="img/header/header_Logo.png" alt=""></a>
+				<a href=""><img src="img/header/header_Logo.png" alt=""></a>
 				<div class="email__title">Stay on the saddle!</div>
 				<form action="#">
 					<input type="email" placeholder="Enter your email...">
@@ -208,11 +223,20 @@
 					</div>
 				</div>
 			</footer>
+
 			<div class="arrow" id="arrowTop" hidden>
-				<img src="img/bottom/up-arrow.svg" alt="">
+				<svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M21.22 10.61L10.61 -4.63778e-07L1.44357e-06 10.61L2.6288 13.2388L10.61 5.25759L18.5912 13.2388L21.22 10.61Z"
+						fill="#445154" />
+				</svg>
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+
 </body>
 
 </html>
