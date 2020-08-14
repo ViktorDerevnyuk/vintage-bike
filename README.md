@@ -1,3 +1,7 @@
 # https://viktardzerauniuk.github.io/vintage-bike/
 
-# vscode_commit_test
+# adaptive and responsive landing page 
+# olwcarousel
+# SASS / SCSS
+# BEM
+# HTML Semantic Elements
