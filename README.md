@@ -1,4 +1,4 @@
-# https://viktardzerauniuk.github.io/vintage-bike/
+# https://viktorderevnyuk.github.io/vintage-bike/
 
 # adaptive and responsive landing page 
 # olwcarousel
